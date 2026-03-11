@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanchoyze Production — Пульс</title>
+    <meta name="description" content="Альбом Пульс от Sanchoyze Production. Слушай онлайн.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="album-info">
+                <h1>ПУЛЬС</h1>
+                <h2>Sanchoyze Production</h2>
+            </div>
+        </header>
+        
+        <main>
+            <div class="player-panel glass-panel">
+                <div class="cover-container" id="cover-container">
+                    <div class="pulse-ring" id="pulse-ring"></div>
+                    <img id="track-cover" src="Братан Какао.jpg" alt="Обложка трека" loading="eager">
+                </div>
+                
+                <div class="track-info">
+                    <h3 id="track-title">Братан Какао</h3>
+                    <p id="track-artist">Sanchoyze Production</p>
+                </div>
+                
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <input type="range" id="progress-bar" min="0" max="100" value="0" aria-label="Прогресс трека">
+                    <span id="duration-time">0:00</span>
+                </div>
+                
+                <div class="controls">
+                    <button class="control-btn" id="prev-btn" aria-label="Предыдущий трек"><i class="fas fa-backward"></i></button>
+                    <button class="control-btn play-btn" id="play-btn" aria-label="Воспроизвести"><i class="fas fa-play"></i></button>
+                    <button class="control-btn" id="next-btn" aria-label="Следующий трек"><i class="fas fa-forward"></i></button>
+                </div>
+                
+                <audio id="audio-element" preload="metadata"></audio>
+            </div>
+            
+            <div class="tracklist-panel glass-panel">
+                <h3>Список треков</h3>
+                <ul id="track-list" role="list"></ul>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
